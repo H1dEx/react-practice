@@ -1,3 +1,4 @@
 import {test} from './test';
 
-test()
+test();
+document.body.innerHTML = '<div>Test</div>';

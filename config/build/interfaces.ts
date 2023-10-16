@@ -9,4 +9,10 @@ export interface Path {
 export interface IConfigParams {
     mode: Mode;
     path: Path;
+    port: number;
+}
+
+export interface EnvParams {
+    mode?: Mode;
+    port?: number
 }

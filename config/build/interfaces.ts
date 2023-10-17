@@ -10,6 +10,7 @@ export interface IConfigParams {
     mode: Mode;
     path: Path;
     port: number;
+    isDev: boolean;
 }
 
 export interface EnvParams {

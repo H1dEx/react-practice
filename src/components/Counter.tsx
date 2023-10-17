@@ -1,5 +1,6 @@
 import {useState} from "react";
-import './Counter.sass'
+import classes from './Counter.module.sass'
+
 export const Counter = () => {
     const [count, setCount] = useState(0);
 
@@ -7,8 +8,8 @@ export const Counter = () => {
     const handleLess = () => setCount(prev => prev - 1)
 
     return (
-        <div className="container">
-            <h1>{count}</h1>
+        <div className={classes.container}>
+            <h3>{count}</h3>
             <div>
                 <button onClick={handleMore}>+</button>
                 <button onClick={handleLess}>-</button>

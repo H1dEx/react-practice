@@ -13,6 +13,7 @@ const config = ({port = PORT, mode = 'development'}: EnvParams): webpack.Configu
         html: path.resolve(__dirname, 'public', 'index.html')
     },
     port,
+    isDev: mode === 'development'
 })
 
 export default config;

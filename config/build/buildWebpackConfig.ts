@@ -5,10 +5,9 @@ import {buildLoaders} from "./buildLoaders";
 import {buildPlugins} from "./buildPlugins";
 import {buildDevServer} from "./buildDevServer";
 
-export function buildWebpackConfig(options:IConfigParams): webpack.Configuration {
-    const {path, mode} = options;
-    const isDev = mode === 'development';
-    const config: webpack.Configuration =  {
+export function buildWebpackConfig(options: IConfigParams): webpack.Configuration {
+    const {path, mode, isDev} = options;
+    const config: webpack.Configuration = {
         mode,
         entry: path.entry,
         output: {
@@ -20,7 +19,7 @@ export function buildWebpackConfig(options:IConfigParams): webpack.Configuration
         devServer: isDev ? buildDevServer(options) : undefined,
         resolve: buildResolvers(),
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
         plugins: buildPlugins(options),
     };

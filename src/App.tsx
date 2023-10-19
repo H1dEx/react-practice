@@ -5,12 +5,13 @@ import {Link} from "react-router-dom";
 import {AboutPageLazy} from "./pages/AboutPage/AboutPage.lazy";
 import {MainPageLazy} from "./pages/MainPage/MainPage.lazy";
 import {useTheme} from "./theme/useTheme";
+import {classNames} from "./helpers/classNames/classNames";
 
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
 
-    return (<div className={`apps ${theme}`}>
+    return (<div className={classNames('apps', {}, [theme])}>
         <div>
             <Link to="/">Main</Link>&nbsp;
 

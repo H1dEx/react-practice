@@ -10,7 +10,8 @@ const config = ({port = PORT, mode = 'development'}: EnvParams): webpack.Configu
     path: {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         output: path.resolve(__dirname, 'build'),
-        html: path.resolve(__dirname, 'public', 'index.html')
+        html: path.resolve(__dirname, 'public', 'index.html'),
+        src: path.resolve(__dirname, 'src')
     },
     port,
     isDev: mode === 'development'

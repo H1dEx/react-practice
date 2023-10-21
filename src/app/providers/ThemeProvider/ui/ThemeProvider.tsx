@@ -1,5 +1,5 @@
 import React, {FC, useCallback, useMemo, useState} from "react";
-import {THEME_STORAGE_KEY, ThemeContext, Themes} from "./ThemeContext";
+import {THEME_STORAGE_KEY, ThemeContext, Themes} from "../lib/ThemeContext";
 
 
 export const ThemeProvider: FC = ({children}) => {

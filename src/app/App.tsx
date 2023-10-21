@@ -2,10 +2,10 @@ import React, {Suspense} from "react";
 import './styles/index.sass';
 import {Route, Routes} from "react-router-dom";
 import {Link} from "react-router-dom";
-import {AboutPageLazy} from "./pages/AboutPage/AboutPage.lazy";
-import {MainPageLazy} from "./pages/MainPage/MainPage.lazy";
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames/classNames";
+import {MainPageLazy} from "pages/MainPage";
+import {useTheme} from "app/providers/ThemeProvider";
+import {classNames} from "helpers/classNames/classNames";
+import {AboutPageLazy} from "pages/AboutPage";
 
 
 export const App = () => {
